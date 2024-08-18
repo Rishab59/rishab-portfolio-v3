@@ -10,7 +10,7 @@ import MobileNavBar from "./MobileNavBar";
 
 const Header = () => {
     return (
-        <header className = "py-8 xl:py-12 text-white">
+        <header className = "py-4 xl:py-6 text-white">
             <div className = "container mx-auto flex justify-between items-center">
                 {/* logo */}
                 <Logo />
@@ -27,7 +27,7 @@ const Header = () => {
                 </div>
 
                 {/* Mobile NavBar */}
-                <div className="xl:hidden">
+                <div className = "xl:hidden">
                     <MobileNavBar />
                 </div>
             </div>

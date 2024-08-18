@@ -13,24 +13,26 @@ const DesktopNavBar = () => {
 
     return (
         <desktopnavbar className = "flex gap-8">
-            { links.map((link, index) => {
-                return (
-                    <Link
-                        href = { link.path }
-                        key = { index }
-                        className = { `${
-                                            (link.path === pathName)
-                                            ?
-                                                "text-accent border-b-2 border-accent" 
-                                            : 
-                                                ""
-                                        }
-                                        font-medium hover:text-accent transition-all` }
-                    >
-                        { link.name[0].toUpperCase() + link.name.slice(1) }
-                    </Link>
-                )
-            }) }
+            {
+                links.map((link, index) => {
+                    return (
+                        <Link
+                            href = { link.path }
+                            key = { index }
+                            className = { `${
+                                                (link.path === pathName)
+                                                ?
+                                                    "text-accent border-b-2 border-accent" 
+                                                : 
+                                                    ""
+                                            }
+                                            font-medium hover:text-accent transition-all` }
+                        >
+                            { link.name[0].toUpperCase() + link.name.slice(1) }
+                        </Link>
+                    )
+                }) 
+            }
         </desktopnavbar>
     );
 };
