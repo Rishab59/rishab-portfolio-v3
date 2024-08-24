@@ -60,7 +60,7 @@ const Community = () => {
 
                                         <Link
                                             href = { community.href }
-                                            className = "w-[70px] h-[70px] rounded-full bg-slate-200 group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                                            className = "w-[70px] h-[70px] rounded-full bg-slate-300 group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                                         >
                                             <BsArrowDownRight
                                                 className = "text-primary text-3xl"
