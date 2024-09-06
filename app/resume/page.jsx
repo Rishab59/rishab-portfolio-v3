@@ -1,13 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import Internships from "./internships";
+import About from "./about";
 import Education from "./education";
 import Skills from "./skills";
-import About from "./about";
+import Internships from "./internships";
+import Communities from "./community";
+import Certifications from "./certifications";
+import DigitalBadgesAndCertificates from "./digitalBadgesAndCertificates";
 
 
 const Resume = () => {
@@ -28,24 +32,34 @@ const Resume = () => {
         >
             <div className = "container mx-auto">
                 <Tabs
-                    defaultValue = "internships"
+                    defaultValue = "about"
                     className = "flex flex-col xl:flex-row gap-[60px]"
                 >
                     <TabsList className = "flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 justify-center">
-                        <TabsTrigger value = "internships">Internships</TabsTrigger>
+                        <TabsTrigger value = "about">About me</TabsTrigger>
                         <TabsTrigger value = "education">Education</TabsTrigger>
                         <TabsTrigger value = "skills">Skills</TabsTrigger>
-                        <TabsTrigger value = "about">About me</TabsTrigger>
+                        <TabsTrigger value = "internships">Internships</TabsTrigger>
+                        <TabsTrigger value = "community">Community</TabsTrigger>
+                        <Link
+                            href = "/projects"
+                        >
+                            <TabsTrigger value = "projects">
+                                Projects
+                            </TabsTrigger>
+                        </Link>
+                        <TabsTrigger value = "certifications">Certifications</TabsTrigger>
+                        <TabsTrigger value = "digitalBagdesAndCertificates">Digital Bagdes And Certificates</TabsTrigger>
                     </TabsList>
 
                     {/* content */}
                     <div className = "min-h-[70vh] w-full">
-                        {/* internships */}
+                        {/* about */}
                         <TabsContent
-                            value = "internships"
-                            className = "w-full"
+                            value = "about"
+                            className = "w-full text-center xl:text-left"
                         >
-                            <Internships />
+                            <About />
                         </TabsContent>
 
                         {/* education */}
@@ -64,12 +78,36 @@ const Resume = () => {
                             <Skills />
                         </TabsContent>
 
-                        {/* about */}
+                        {/* internships */}
                         <TabsContent
-                            value = "about"
-                            className = "w-full text-center xl:text-left"
+                            value = "internships"
+                            className = "w-full"
                         >
-                            <About />
+                            <Internships />
+                        </TabsContent>
+
+                        {/* community */}
+                        <TabsContent
+                            value = "community"
+                            className = "w-full"
+                        >
+                            <Communities />
+                        </TabsContent>
+
+                        {/* certifications */}
+                        <TabsContent
+                            value = "certifications"
+                            className = "w-full"
+                        >
+                            <Certifications />
+                        </TabsContent>
+                        
+                        {/* digitalBagdesAndCertificates */}
+                        <TabsContent
+                            value = "digitalBagdesAndCertificates"
+                            className = "w-full"
+                        >
+                            <DigitalBadgesAndCertificates />
                         </TabsContent>
                     </div>
                 </Tabs>

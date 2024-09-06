@@ -9,8 +9,8 @@ const stats = [
         text: "Projects",
     },
     {
-        num: 26,
-        text: "Projects Completed",
+        num: 200,
+        text: "Leetcode Problems Solved",
     },
     {
         num: 8,
@@ -37,7 +37,7 @@ const Stats = () => {
                                     <CountUp
                                         end = { item.num }
                                         duration = { 5 }
-                                        delay = { 2 }
+                                        delay = { 1 }
                                         className = "text-4xl xl:text-6xl font-extrabold"
                                     />
                                     

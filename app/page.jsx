@@ -14,18 +14,19 @@ const Home = () => {
         <div className = "flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-16">
           {/* text */}
           <div className = "text-center xl:text-left order-2 xl:order-none">
-            <span className = "text-xl">
-              Software Developer
-            </span>
-
-            <h1 className = "h1 mb-6">
-              Hello I'm<br />
+            <h1 className = "h1 mb-3">
+              Hello I'm
+              <br />
               <span className = "text-accent">
                 Rishab.H
               </span>
             </h1>
 
-            <p className = "max-w-[500px] mb-9 text-white/80">
+            <span className = "text-xl">
+              Software Developer
+            </span>
+
+            <p className = "max-w-[500px] mt-6 mb-9 text-white/80">
               I'm interested in Java and MERN. I worked on lots of projects.
             </p>
 

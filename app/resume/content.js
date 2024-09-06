@@ -44,7 +44,6 @@ export const about = {
 
 // internships data
 export const internships = {
-    icon: "/assets/resume/badge.svg",
     title: "My Internships",
     description: "ToDO content later",
     items: [
@@ -52,11 +51,29 @@ export const internships = {
             company: "DRDO",
             position: "Project Student",
             duration: "2024 - Fill",
+            skillsGained: [
+                {
+                    skillName: "HTML5",
+                },
+                {
+                    skillName: "HTML5",
+                },
+            ],
+            verify: "/",
         },
         {
             company: "CDAC",
             position: "Project Student",
             duration: "2024 - Fill",
+            skillsGained: [
+                {
+                    skillName: "HTML5",
+                },
+                {
+                    skillName: "HTML5",
+                },
+            ],
+            verify: "/",
         },
     ],
 };
@@ -116,6 +133,124 @@ export const skills = {
         {
             icon: <FaFigma />,
             name: "Figma",
+        },
+        {
+            icon: <FaFigma />,
+            name: "Figma",
+        },
+        {
+            icon: <FaFigma />,
+            name: "Figma",
+        },
+    ],
+};
+
+// community data
+export const community = {
+    title: "Communities I'm contributing to",
+    description: "ToDO content later",
+    items: [
+        {
+            name: "AWS Cloud Club Panimalar Chennai",
+            duration: "2024 - Fill",
+            role: "FullStack Lead @ AWS Cloud Club Panimalar Chennai",
+            link: "/",
+            logo: "/assets/community/AWS_Cloud_Club_Logo.jpg",
+            description: "",
+        },
+        {
+            name: "Coders Forum",
+            duration: "2024 - Fill",
+            role: "Initiator & Strategist @ Coders Forum",
+            link: "/",
+            logo: "/assets/community/AWS_Cloud_Club_Logo.jpg",
+            description: "",
+        },
+        {
+            name: "IEEE - Panimalar",
+            duration: "2024 - Fill",
+            role: "Student Coordinator @ IEEE - Panimalar",
+            link: "/",
+            logo: "/assets/community/AWS_Cloud_Club_Logo.jpg",
+            description: "",
+        },
+    ],
+};
+
+// certifications data
+export const certifications = {
+    title: "My Certifications",
+    description: "ToDO content later",
+    items: [
+        {
+            name: "PEC",
+            issueDate: "sometime",
+            expiryDate: "ToDo",
+            issuedBy: "PEC",
+            certificate: "/assets/work/thumb3.png",
+            verify: "/",
+        },
+        {
+            name: "PEC",
+            issueDate: "now",
+            expiryDate: "Todo",
+            issuedBy: "Pec",
+            certificate: "/assets/certifications/AI-900.pdf",
+            verify: "/",
+        },
+        {
+            name: "PEC",
+            issueDate: "now",
+            expiryDate: "Todo",
+            issuedBy: "Pec",
+            certificate: "/assets/certifications/AI-900.pdf",
+            verify: "/",
+        },
+        {
+            name: "PEC",
+            issueDate: "sometime",
+            expiryDate: "ToDo",
+            issuedBy: "PEC",
+            certificate: "/assets/work/thumb3.png",
+            verify: "/",
+        },
+    ],
+};
+
+// digital badges data
+export const digitalBadgesAndCertificates = {
+    title: "My Digital Badges & Certificates",
+    description: "ToDO content later",
+    items: [
+        {
+            src: "/assets/work/thumb1.png",
+            name: "PEC",
+            issuedBy: "PEC",
+            verify: "/",
+        },
+        {
+            src: "/assets/work/thumb3.png",
+            name: "PEC",
+            issuedBy: "PEC",
+            verify: "/",
+        },
+        {
+            src: "/assets/work/thumb3.png",
+            name: "PEC",
+            issuedBy: "PEC",
+            verify: "/",
+        },
+        {
+            src: "/assets/work/thumb3.png",
+            name: "PEC",
+            issuedBy: "PEC",
+            verify: "/",
+        },
+        {
+            src: "/assets/work/thumb3.png",
+            name: "PEC",
+            issuedBy: "PEC",
+            verify: "/",
         },
     ],
 };
