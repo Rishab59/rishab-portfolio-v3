@@ -1,38 +1,45 @@
 "use client";
 
+import Link from "next/link";
+
+import { PiCaretRightBold } from "react-icons/pi";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-import { digitalBadgesAndCertificates } from "./content";
 import FileViewer from "@/components/FileViewer";
-import Link from "next/link";
-import { PiCaretRightBold } from "react-icons/pi";
+
+import { digitalBadgesAndCertificates as DBC } from "@/data/resume-content.js";
+import StaticTypingEffect from "@/components/typingEffect/StaticTypingEffect";
 
 
 const DigitalBadgesAndCertificates = () => {
     return (
         <div className = "flex flex-col gap-[30px] text-center xl:text-left">
-            <h3 className = "text-3xl font-bold">
-                { digitalBadgesAndCertificates.title }
+            <h3 className = "text-accent text-3xl font-bold h-8">
+                <StaticTypingEffect
+                    content = { `${DBC.title} - (${DBC.items.length})` }
+                    typingSpeed = { 100 }
+                />
             </h3>
 
-            <p className = "max-w-[600px] text-white/60 mx-auto xl:mx-0">
+            {/* <p className = "max-w-[600px] text-white/60 mx-auto xl:mx-0">
                 { digitalBadgesAndCertificates.description }
-            </p>
+            </p> */}
 
-            <ScrollArea className = "h-[400px]">
+            <ScrollArea className = "h-[425px]">
                 <ul className = "grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {
-                        digitalBadgesAndCertificates.items.map((item, index) => {
+                        DBC.items.sort((a, b) => new Date(b.issueDate) - new Date(a.issueDate)).map((item, index) => { // sorts in decending order of issueDate and then map
                             return (
                                 <li 
                                     key = { index }
-                                    className = "bg-[#232329] h-[300px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                    className = "bg-[#232329] h-[365px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                 >
-                                    <div className = "w-full h-[70%]">
+                                    <div className = "w-full h-[70%] min-h-[40%]">
                                         <FileViewer file = { item.src } />
                                     </div>
 
-                                    <h3 className = "text-xl max-w-[260px] min-h-[30px] text-center lg:text-left mt-2">
+                                    <h3 className = "text-lg max-w-[260px] text-center lg:text-left mt-2">
                                         { item.name }
                                     </h3>
 
@@ -45,22 +52,34 @@ const DigitalBadgesAndCertificates = () => {
                                         </p>
                                     </div>
 
+                                    <span className = "text-accent">
+                                        IssuedOn:
+                                        &nbsp;
+                                        { item.issueDate }
+                                    </span>
+
+                                    {
+                                        item.credentialID && (
+                                            <span className = "text-accent text-xs">
+                                                Credential ID:
+                                                &nbsp;
+                                                { item.credentialID }
+                                            </span>
+                                        )
+                                    }
+
                                     <div className = "mt-3">
                                         <Link
                                             key = { index }
                                             href = { item.verify }
-                                            legacyBehavior
+                                            target = "_blank" 
+                                            rel = "noopener noreferrer"
+                                            className = "text-white no-underline hover:text-accent hover:underline"
                                         >
-                                            <a
-                                                className = "text-white no-underline hover:text-accent hover:underline"
-                                                target = "_blank" 
-                                                rel = "noopener noreferrer"
-                                            >
-                                                <span className = "flex items-center">
-                                                    Verify
-                                                    <PiCaretRightBold className = "ml-2" />
-                                                </span>
-                                            </a>
+                                            <span className = "flex items-center">
+                                                Verify
+                                                <PiCaretRightBold className = "ml-2" />
+                                            </span>
                                         </Link>
                                     </div>
                                 </li>

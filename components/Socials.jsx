@@ -1,26 +1,7 @@
 import Link from "next/link";
 
-import { FaLinkedin, FaGithub, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { socials } from "@/data/social-icon-links";
 
-
-const socials = [
-    {
-        icon: FaLinkedin,
-        path: "https://www.linkedin.com/in/hrishab59/",
-    },
-    {
-        icon: FaGithub,
-        path: "https://www.github.com/Rishab59/",
-    },
-    {
-        icon: FaWhatsapp,
-        path: "https://wa.me/7200076122?text=Hey%20Rishab,%20I%27m%20interested%20to%20collaborate%20with%20you.",
-    },
-    {
-        icon: FaInstagram,
-        path: "https://instagram.com/hrishab_59?igshid=ZDc4ODBmNjlmNQ==",
-    },
-];
 
 const Socials = ({ containerStyles, iconStyles }) => {
     return (
@@ -33,16 +14,11 @@ const Socials = ({ containerStyles, iconStyles }) => {
                         <Link
                             key = { index }
                             href = { item.path }
-                            legacyBehavior
+                            target = "_blank"
+                            rel = "noopener noreferrer"
+                            className = { iconStyles }
                         >
-                            <a
-                                className = { iconStyles }
-                                target = "_blank" 
-                                rel = "noopener noreferrer"
-                            >
-                                {/* { item.icon } */}
-                                <IconComponent className = "w-1/2 h-1/2" />
-                            </a>
+                            <IconComponent className = "w-1/2 h-1/2" />
                         </Link>
                     );
                 })

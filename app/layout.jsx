@@ -20,12 +20,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={jetbrainsMono.variable}>
+    <html lang = "en">
+      <body className = { jetbrainsMono.variable }>
         <Header />
         <StairTransition />
         <PageTransition>
-          {children}
+          { children }
         </PageTransition>
       </body>
     </html>

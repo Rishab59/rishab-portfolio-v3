@@ -5,10 +5,6 @@ const FileViewer = ({ file }) => {
     const isImage = /\.(jpeg|jpg|gif|png|webp|svg)$/.test(file);
     const isPDF = /\.pdf$/.test(file);
 
-    // const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
-    // const src = isMobile ? `${file}#zoom=85` : file;
-    // console.log(src);
-
 
     return (
         <div className="flex items-center gap-3 relative w-full h-full">
@@ -20,7 +16,7 @@ const FileViewer = ({ file }) => {
                         alt = "Image"
                         fill
                         className = "object-scale-down bg-primary"
-                        unoptimized = { true }
+                        // unoptimized = { true }
                     />
                 )
             }

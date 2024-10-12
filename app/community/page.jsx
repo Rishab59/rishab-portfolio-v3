@@ -1,35 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+
 import { motion } from "framer-motion";
 
 import { BsArrowDownRight } from "react-icons/bs";
-import Image from "next/image";
 
+import { communities } from "@/data/resume-content.js";
 
-const communities = [
-    {
-        num: "01",
-        title: "AWS Cloud Club Panimalar Chennai",
-        description: "FullStack Lead @ AWS Cloud Club Panimalar Chennai",
-        href: "/",
-        logo: "/assets/community/AWS_Cloud_Club_Logo.jpg",
-    },
-    {
-        num: "02",
-        title: "Coders Forum",
-        description: "Initiator & Strategist @ Coders Forum",
-        href: "/",
-        logo: "/assets/community/AWS_Cloud_Club_Logo.jpg",
-    },
-    {
-        num: "03",
-        title: "IEEE - Panimalar",
-        description: "Student Coordinator @ IEEE - Panimalar",
-        href: "/",
-        logo: "/assets/community/AWS_Cloud_Club_Logo.jpg",
-    },
-];
 
 const Community = () => {
     return (
@@ -50,7 +29,7 @@ const Community = () => {
                     className = "grid grid-cols-1 md:grid-cols-2 gap-[60px]"
                 >
                     {
-                        communities.map((community, index) => {
+                        communities.items.map((community, index) => {
                             return (
                                 <div
                                     key = { index }
@@ -62,41 +41,67 @@ const Community = () => {
                                             { community.num }
                                         </div>
 
-                                        <Link
-                                            href = { community.href }
-                                            className = "w-[70px] h-[70px] rounded-full bg-slate-300 group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                                        >
-                                            <BsArrowDownRight
-                                                className = "text-primary text-3xl"
-                                            />
-                                        </Link>
+                                        {
+                                            community.link && (
+                                                <Link
+                                                    href = { community.link }
+                                                    className = "w-[70px] h-[70px] rounded-full bg-slate-300 group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45 text-primary"
+                                                    target = "_blank"
+                                                    rel = "noopener noreferrer"
+                                                >
+                                                    <BsArrowDownRight className = "text-3xl" />
+                                                </Link>
+                                            )
+                                        }
                                     </div>
-
-                                    
                                     
                                     <div className = "flex flex-row items-center gap-6">
-                                        <div className = "flex flex-col">
-                                            {/* title */}
+                                        <div className = "flex flex-col w-[75%]">
+                                            {/* name */}
                                             <h2 className = "text-3xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
-                                                { community.title }
+                                                { community.name }
                                             </h2>
 
-                                            {/* description */}
+                                            {/* role */}
                                             <p className = "text-white/60 mt-3">
-                                                { community.description }
+                                                { community.role }
                                             </p>
                                         </div>
 
-                                        <div className = "flex-shrink-0 w-[25%] flex justify-end">
+                                        <div className = "flex-shrink-0 w-[25%] flex justify-end ml-11">
                                             <Image
                                                 src = { community.logo }
                                                 alt = "Community Logo Image"
-                                                width = { 100 }
-                                                height = { 100 }
-                                                className = "object-cover rounded-full ml-5"
-                                                unoptimized = { true }
+                                                width = { 
+                                                    (community.num === "03") 
+                                                    ?
+                                                        130 
+                                                    : 
+                                                        100 
+                                                }
+                                                height = { 
+                                                    (community.num === "03") 
+                                                    ?
+                                                        130
+                                                    : 
+                                                        100 
+                                                }
+                                                className = { 
+                                                    "object-cover"
+                                                    + (
+                                                        (community.name !== "AWS Cloud Club Panimalar Chennai")
+                                                        &&
+                                                        " rounded-full"
+                                                    ) 
+                                                }
                                             />
                                         </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <p className = "text-white/65 text-justify">
+                                            { community.description }
+                                        </p>
                                     </div>
 
                                     {/* border */}
@@ -107,6 +112,10 @@ const Community = () => {
                         })
                     }
                 </motion.div>
+                
+                {/* give gap after the content to the end of page */}
+                <div className = "mb-20">
+                </div>
             </div>
         </section>
     );

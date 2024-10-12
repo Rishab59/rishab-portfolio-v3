@@ -1,26 +1,26 @@
 "use client";
 
 import React, { useState } from "react";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+
+import Link from "next/link";
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-import Link from "next/link";
-import Image from "next/image";
-
-import { projects } from "./projects";
-
 import ProjectsSliderBtns from "@/components/ProjectsSliderBtns";
+
+import { projects } from "@/data/projects.js";
 
 
 const getUniqueCategories = (projects) => {
     const categories = projects.map(project => project.category);
-    return [...new Set(categories)];
+    return [...new Set(categories)].sort((a, b) => b.localeCompare(a)); // sort in decending order
 };
 
 
@@ -109,12 +109,17 @@ const Projects = () => {
                                 }
                             </div>
 
-                            {/* project category */}
+                            {/* project title */}
                             <h2 className = "text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                                { project.category }
-                                &nbsp;
-                                project
+                                { project.title }
                             </h2>
+
+                            {/* project category */}
+                            <p className = "text-white/60">
+                                Category:
+                                &nbsp;
+                                { project.category }
+                            </p>
 
                             {/* project description */}
                             <p className = "text-white/60">
@@ -151,13 +156,9 @@ const Projects = () => {
                             <div className = "flex items-center gap-4">
                                 {/* live project */}
                                 {
-                                    project.liveOutput !== ""
-                                    &&
-                                    <Link
-                                        href = { project.liveOutput }
-                                        legacyBehavior
-                                    >
-                                        <a
+                                    project.liveOutput !== "" && (
+                                        <Link
+                                            href = { project.liveOutput }
                                             target = "_blank"
                                             rel = "noopener noreferrer"
                                         >
@@ -176,35 +177,31 @@ const Projects = () => {
                                                     </TooltipContent>
                                                 </Tooltip>
                                             </TooltipProvider>
-                                        </a>
-                                    </Link>
+                                        </Link>
+                                    )
                                 }
 
                                 {/* GitHub Link */}
                                 <Link
                                     href = { project.sourceCode }
-                                    legacyBehavior
+                                    target = "_blank"
+                                    rel = "noopener noreferrer"
                                 >
-                                    <a
-                                        target = "_blank"
-                                        rel = "noopener noreferrer"
-                                    >
-                                        <TooltipProvider delayDuration = { 100 }>
-                                            <Tooltip>
-                                                <TooltipTrigger className = "w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                                    <BsGithub
-                                                        className = "text-white text-3xl group-hover:text-accent"
-                                                    />
-                                                </TooltipTrigger>
+                                    <TooltipProvider delayDuration = { 100 }>
+                                        <Tooltip>
+                                            <TooltipTrigger className = "w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                                <BsGithub
+                                                    className = "text-white text-3xl group-hover:text-accent"
+                                                />
+                                            </TooltipTrigger>
 
-                                                <TooltipContent>
-                                                    <p>
-                                                        Source Code
-                                                    </p>
-                                                </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </a>
+                                            <TooltipContent>
+                                                <p>
+                                                    Source Code
+                                                </p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
                                 </Link>
                             </div>
                         </div>
@@ -235,7 +232,6 @@ const Projects = () => {
                                                     alt = "Project Image"
                                                     fill
                                                     className = "object-scale-down bg-primary"
-                                                    unoptimized = { true }
                                                 />
                                             </div>
                                         </div>
