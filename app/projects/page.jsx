@@ -89,9 +89,9 @@ const Projects = () => {
                     </select>
                 </div>
 
-                <div className = "flex flex-col xl:flex-row xl:gap-[30px]">
+                <div className = "flex flex-col xl:flex-row xl:gap-[50px]">
                     <div className = "w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-                        <div className = "flex flex-col gap-[30px] h-[50%]">
+                        <div className = "flex flex-col gap-[25px] h-[50%]">
                             {/* outline num */}
                             <div className = "text-6xl leading-none font-extrabold text-transparent text-outline flex gap-4">
                                 {
@@ -102,7 +102,9 @@ const Projects = () => {
                                             '00'
                                 }
 
-                                <span>/</span>
+                                <span>
+                                    /
+                                </span>
                                 
                                 {
                                     filteredProjects.length.toString().padStart(2, '0')
@@ -126,8 +128,12 @@ const Projects = () => {
                                 { project.description }
                             </p>
 
+                            <p className = "text-xl">
+                                Tech Stack:
+                            </p>
+
                             {/* tech stack */}
-                            <ul className = "flex gap-4">
+                            <ul className = "flex gap-4 -mt-4">
                                 {
                                     project.stack.map((item, index) => (
                                         <li

@@ -18,7 +18,7 @@ const StaticTypingEffect = ({ content, typingSpeed = 100 }) => {
 
     return (
         <span>
-            { typedText }
+            { typedText.length == content.length ? typedText : typedText + "|"}
         </span>
     );
 };

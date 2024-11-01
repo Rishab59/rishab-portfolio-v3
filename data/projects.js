@@ -1,7 +1,7 @@
 export const projects = [
     {
         title: "NotesApp",
-        description: "ToDo - Fill content",
+        description: "This is a notes taking app with React JS as Frontend and Django as Backend.",
         category: "Django + ReactJS",
         stack: [
             { name: "Django" },
@@ -13,7 +13,7 @@ export const projects = [
     },
     {
         title: "Notepad",
-        description: "ToDo - Fill content",
+        description: "This is a Notepad application developed using Java.",
         category: "Java",
         stack: [
             { name: "Java" },
@@ -25,7 +25,7 @@ export const projects = [
     },
     {
         title: "Quiz App using React JS",
-        description: "ToDo - Fill content",
+        description: "This is a hobbby Quiz App Web Project developed using React JS.",
         category: "React JS",
         stack: [
             { name: "React JS" },
@@ -36,7 +36,7 @@ export const projects = [
     },
     {
         title: "Firebase Social Media",
-        description: "ToDo - Fill content",
+        description: "This is a social media Web Project developed using React JS, TypeScript, Firebase.",
         category: "React JS",
         stack: [
             { name: "React JS" },
@@ -48,7 +48,7 @@ export const projects = [
     },
     {
         title: "Music Player",
-        description: "ToDo - Fill content",
+        description: "This is a Music Player Hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -61,7 +61,7 @@ export const projects = [
     },
     {
         title: "Chess Game",
-        description: "ToDo - Fill content",
+        description: "This is a Chess Game hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -74,7 +74,7 @@ export const projects = [
     },
     {
         title: "2048 Game",
-        description: "ToDo - Fill content",
+        description: "This is a 2048 Game hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -87,7 +87,7 @@ export const projects = [
     },
     {
         title: "Quiz App",
-        description: "ToDo - Fill content",
+        description: "This is a Quiz App Web Project developed using JS for an intercollege event.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -100,7 +100,7 @@ export const projects = [
     },
     {
         title: "Snake Game",
-        description: "ToDo - Fill content",
+        description: "This is a Snake Game Project developed using Java Swing.",
         category: "Java",
         stack: [
             { name: "Java" },
@@ -112,7 +112,7 @@ export const projects = [
     },
     {
         title: "Calculator using React JS",
-        description: "ToDo - Fill content",
+        description: "This is a simple Calculator Project developed using React JS.",
         category: "React JS",
         stack: [
             { name: "React JS" },
@@ -123,7 +123,7 @@ export const projects = [
     },
     {
         title: "Sudoku Game",
-        description: "ToDo - Fill content",
+        description: "This is a Suduku Game Hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -136,7 +136,7 @@ export const projects = [
     },
     {
         title: "Calculator Using Java Swing",
-        description: "ToDo - Fill content",
+        description: "This is a simple Calculator Hobby Project developed using Java Swing.",
         category: "Java",
         stack: [
             { name: "Java" },
@@ -148,7 +148,7 @@ export const projects = [
     },
     {
         title: "ToDo List Using React JS",
-        description: "ToDo - Fill content",
+        description: "This is a ToDo List Project developed using React JS.",
         category: "React JS",
         stack: [
             { name: "React JS" },
@@ -159,7 +159,7 @@ export const projects = [
     },
     {
         title: "Tic Tac Toe Game",
-        description: "ToDo - Fill content",
+        description: "This is a Tic Tac Toe Game Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -172,7 +172,7 @@ export const projects = [
     },
     {
         title: "Google Search Recreation",
-        description: "ToDo - Fill content",
+        description: "This is a Google Search Recreation Hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -185,7 +185,7 @@ export const projects = [
     },
     {
         title: "Group Chat",
-        description: "ToDo - Fill content",
+        description: "This is a Group Chat Project developed using Java.",
         category: "Java",
         stack: [
             { name: "Java" },
@@ -196,7 +196,7 @@ export const projects = [
     },
     {
         title: "Calculator Using JS",
-        description: "ToDo - Fill content",
+        description: "This is a Calculator Hobby Project developed using JavaScript",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -209,7 +209,7 @@ export const projects = [
     },
     {
         title: "To Do List Using JS",
-        description: "ToDo - Fill content",
+        description: "This is a ToDo List Hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -222,7 +222,7 @@ export const projects = [
     },
     {
         title: "Calculator Using JS",
-        description: "ToDo - Fill content",
+        description: "This is a Calculator Hobby Project developed using JavaScript.",
         category: "JavaScript",
         stack: [
             { name: "HTML 5" },
@@ -235,7 +235,7 @@ export const projects = [
     },
     {
         title: "Supermarket Billing System Using C++",
-        description: "ToDo - Fill content",
+        description: "This is a Supermarket Billing System project developed using C++.",
         category: "C++",
         stack: [
             { name: "C++" },
@@ -246,7 +246,7 @@ export const projects = [
     },
     {
         title: "Next Date Calculator Using C",
-        description: "ToDo - Fill content",
+        description: "This is a Next Date Calculator project developed using C.",
         category: "C",
         stack: [
             { name: "C" },
@@ -257,7 +257,7 @@ export const projects = [
     },
     {
         title: "Horizontal Scroll Text Using C",
-        description: "ToDo - Fill content",
+        description: "This is a Horizontal Scroll Text Project developed using C.",
         category: "C",
         stack: [
             { name: "C" },

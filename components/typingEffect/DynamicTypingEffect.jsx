@@ -32,7 +32,7 @@ const DynamicTypingEffect = ({ phrases, typingSpeed = 100, delayAfterTyping = 10
 
     return (
         <span>
-            { text }
+            { text.length == phrases[phraseIndex].length ? text : text + "|"}
         </span>
     );
 };

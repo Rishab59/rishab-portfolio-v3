@@ -11,3 +11,8 @@ npm i react-icons
 npm i react-countup
 
 npm i swiper
+
+npm install @emailjs/browser
+
+npm install react-toastify
+
